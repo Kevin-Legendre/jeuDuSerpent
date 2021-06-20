@@ -1,0 +1,125 @@
+body {
+    background-color:#ACCB9D;
+}
+
+h1 {
+    text-align: center;
+    color: #314028;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    display: none;
+}
+
+.directions {
+    width: 195px;
+    margin: 1rem  auto;
+    display:grid;
+    grid-template-areas:
+                ". top ."
+                "left start right"
+                ". bottom .";
+    gap: 5px;
+}
+
+.dir {
+    border: 1px solid rgba(49, 64, 40, 0.6);
+    border-radius: 4px;
+    width: 60px;
+    height: 60px;
+}
+
+.dir-left {
+    grid-area: left;
+}
+
+.dir-up {
+    grid-area: top;
+}
+
+.dir-right {
+    grid-area: right;
+}
+
+.dir-down {
+    grid-area: bottom;
+}
+
+.dir-start {
+    grid-area: start;
+}
+
+.dir .fas {
+    font-size: 40px;
+    line-height: 60px;
+    width: 100%;
+    text-align: center;
+    color: rgba(49, 64, 40, 0.6);
+}
+
+.dir-start .fas {
+    color: rgba(49, 64, 40, 0.856);
+}
+
+
+@media screen and (max-width: 940px){
+    canvas {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    h1{
+        font-size: 2rem;
+    }
+    
+    canvas {
+        width: 95%;
+        border: 5px solid #314028!important;
+        margin: 0 auto!important;
+    }
+
+    .container {
+        display: block
+    }
+}
+
+.fa-play{
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.fa-play.active{
+    opacity: 1;
+}
+
+/*BUTTON BACK*/
+.btn {
+    padding: .7rem .8rem;
+    border-radius: .25rem;
+
+}
+
+.btn-back {
+    position: fixed;
+    bottom: 30px;
+    left: 15px;
+    
+    
+    background-color: #0155A9;
+}
+
+.btn-back a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size:1.2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
